@@ -1,0 +1,318 @@
+%%
+%%
+\documentclass[style=fyma
+%orient=portrait, mode=handout ,display=slidesnotes
+ ]{powerdot}
+
+\usepackage{amssymb,amsmath}
+\usepackage{latexsym, stmaryrd, mathrsfs}
+
+\title{Automata and Logic}
+\author{Mia Minnes}
+
+\begin{document}
+
+\maketitle
+
+\begin{slide}{Overview}
+  \begin{itemize}
+    \item Background and motivation
+    \item Definitions of automata: Closure properties and class inclusions
+    \item Definitions of automatic structures
+    \item Model theoretic questions: Isomorphism and Scott rank
+    \item Unary automatic structures
+    \item Automatic decision procedures
+    \item Directions for future work
+  \end{itemize}
+\end{slide}
+
+\section{Background and Motivation}
+
+\begin{slide}{Historical sumary}
+  \begin{itemize}
+    \item Kleene, Myhill Nerode theorem, Pumping Lemma characterizing regular languages
+    \item (1960s) J.R B\"uchi, C.C. Elgot - $S1S$ and B\"uchi automata
+    \item (1969) M.O Rabin - $S2S$ and Rabin automata on infinite binary trees
+      \begin{itemize}
+        \item Decidability of monadic second order theory of countable linear orders
+        \item Decidability of first order theory of lattice of all closed subsets of the real line
+      \end{itemize}
+    \item (1984) M Vardi and P Wolper - $\omega$-automata for program verification
+    \item (1982, 1989) B Hodgson, B Khoussainov, A Nerode - Automatic structures
+  \end{itemize}
+\end{slide}
+
+\section{Definitions}
+
+\begin{slide}{Finite Automata}
+  \begin{itemize}
+    \item $\mathcal{A} = (S, \Sigma, I, \delta, F)$, input in $\Sigma^{*}$.
+    \item Regular language: $L \subset \Sigma^{*}$ such that $L = L(\mathcal{A})$ for some FA.
+    \item Non-deterministic/ deterministic FA equally expressive.  But, $2^{O(|S|)}$ cost for determinization.
+    \item The set of regular languages is closed under union, intersection, complementation (exponential blow up), projection.
+    \item Decidable questions:
+      \begin{itemize}
+        \item Emptiness
+        \item Equality
+        \item Universality
+        \item Containment
+      \end{itemize}
+  \end{itemize}
+\end{slide}
+
+\begin{slide}{$\omega$-automata}
+  \begin{itemize}
+    \item $\mathcal{A} = (S, \Sigma, I, \delta, Acc)$, input in $\Sigma^{\omega}$.
+      \begin{itemize}
+        \item B\"uchi - $F \subseteq S$ \qquad \qquad $Acc: \text{Inf}(r) \cap F \neq \emptyset$
+        \item M\"uller - $\mathcal{F} \subseteq \mathscr{P}(S)$ \qquad $Acc: \text{Inf}(r) \in \mathcal{F}$
+      \end{itemize}
+    \item Non-deterministic B\"uchi, non-deterministic M\"uller, deterministic M\"uller equally expressive.  Deterministic B\"uchi strictly less expressive.  
+    \item $\omega$-regular languages: $L \subset \Sigma^{\omega}$ such that $L = L(\mathcal{A})$ for some non-deterministic B\"uchi automaton.
+    \item The set of $\omega$-regular languages is closed under union, intersection, complementation (hard - $2^{O(n \log n)}$ blow up).
+    \item Decidable questions:
+      \begin{itemize}
+        \item Emptiness (lasso) , etc.
+      \end{itemize}
+  \end{itemize}
+\end{slide}
+
+\begin{slide}{Automatic structures}
+  \begin{itemize}
+    \item As we saw, automata describe subsets of the words over a given alphabet.  What about relations?  Define convolution of relation.
+    \item Automatic structure: $(A, R, \ldots, F, \ldots)$ where the domain, $A$, and each relation and function (replace $F$ by $graph(F)$) is automatic -- variants FA, BA, TA.  
+    \item Examples:
+      \begin{itemize}
+        \item $(1^{*}, S)$, $(1^{*}, \leq)$, $( \{ \lambda \} \cup \{0, \ldots, k-1\}^{*}\{ 1, \ldots, k-1\}, \text{Add}_{k}) \cong (\mathbb{N}, +)$, $(Conf(T), E_{T})$ all FA presentable structures.
+       \medskip
+        \item $(\mathbb{Q}, +)$ -- open.
+       \medskip
+        \item $(\{ 0,1\}^{*}, \cdot)$, $(\mathbb{N}, \cdot)$ not FA presentable.
+      \end{itemize}
+    \item Any automatic structure is presentable over binary alphabet
+    \item For each structure $\mathcal{A}$, there is graph $G(\mathcal{A})$ such that $\mathcal{A}$ is automatically presentable iff $G(\mathcal{A})$ is automatically presentable.
+  \end{itemize}
+\end{slide}
+
+\section{Logical Properties}
+
+\begin{slide}{FO Decidability}
+\begin{itemize}
+  \item Theorem: (1) There is an algorithm which, given FO formula $\varphi(\bar{x})$ produces automaton recognizing $R_{\varphi}$.
+  \item Theorem: (2) The FO theory of any automaton is decidable.
+  
+  \medskip
+  \pause
+  \item Proof: (1) Use automata given for atomic sentences, then closure under Boolean operations of regular languages yields automata for arbitrary FO formulas.
+  \item Proof: (2) To check if $\mathcal{A} \vDash \exists x \varphi(x)$, construct automaton for $\varphi(x)$ and check for emptiness.
+
+  \bigskip
+  \item Note: the above is the basis for automatic decision procedures...more on this later.
+  \end{itemize}
+\end{slide}
+
+\begin{slide}{Isomorphism problem}
+\vspace{-5pt}
+  The complexity of the isomorphism problem for automatic...
+  \begin{itemize}
+    \item[] \ldots structures (in general) is $\Sigma^{1}_{1}$-complete
+      \begin{itemize}
+        \item[] \qquad (Khoussainov, Nies, Rubin, Stephan 2004)
+      \end{itemize}
+    \item[] \ldots ordinals is decidable.
+    \item[] \ldots Boolean algebras is decidable.
+    \item[] \ldots  equivalence structures is at most $\Pi^{0}_{1}$.  
+      \begin{itemize}
+        \item[] \qquad Open whether decidable or $\Pi^{0}_{1}$-complete.
+      \end{itemize}
+    \item[] \ldots linear orders is unknown.\\
+    (Blumensath; Khoussainov, Rubin)
+  \end{itemize}
+
+\pause
+Idea of proofs:
+\begin{itemize}
+\vspace{-5pt}
+\item To show $\Sigma^{1}_{1}$-complete, reduce isomorphism problem of c.e. downward closed trees to it.
+\item To show decidable, find characterization of automatic structures of the class in terms of something finite (e.g.\ FC-rank for ordinals, finite powers of BA of finite and cofinite subsets of $\omega$).
+\end{itemize}
+\end{slide}
+
+%Compare to computable structures, isomorphism question for computable ordinals is $\Pi^{1}_{1}$-complete, 
+
+\begin{slide}{Scott Rank}
+%In the previous slides we saw that some classes of automatic structures seem to be simpler than the corresponding computable structures.
+  \begin{itemize}
+    \item Equivalence relations: 
+      \begin{itemize}
+        \item $\bar{a} \equiv^{0} \bar{b}$ if $\bar{a}$ and $\bar{b}$ satisfy the same quantifier free formulas 
+	\item $\bar{a} \equiv^{\alpha+1} \bar{b}$ if for all $c$ there is $d$, and for all $d$ there is $c$ such that $\bar{a},c \equiv^{\alpha} \bar{b},d$
+	\item $\bar{a} \equiv^{\beta} \bar{b}$ if for all $\gamma < \beta$, $\bar{a} \equiv^{\gamma} \bar{b}$.
+      \end{itemize}
+    \item Scott rank of $\bar{a}$ in $\mathcal{A}$, $SR( \bar{a})$, is least $\beta$ such that for all $\bar{b}$, $\bar{a} \equiv^{\beta} \bar{b}$ implies $(\mathcal{A}, \bar{a}) \cong (\mathcal{A}, \bar{b})$.
+    \item Scott rank of $\mathcal{A}$, $SR(\mathcal{A})$, is least ordinal greater than the ranks of all tuples in $\mathcal{A}$.
+  \end{itemize}
+\vspace{-10pt}
+(Scott, 1965)
+
+%Example: For $\mathcal{A}$ a countable linear order of type $\omega$, $\bar{a} \equiv^{0} \bar{b}$ if they are ordered the same way, $\bar{a} \equiv^{1} \bar{b}$ if the corresponding intervals have the same size, which assures isomorphism.  Hence $SR(\mathcal{A}) = 2$.
+
+\pause \medskip
+
+Fact (Nadel, 1974): If $\mathcal{A}$ is a computable structure, then $SR(\mathcal{A}) \leq \omega_{1}^{CK} + 1$. 
+
+\medskip
+
+Fact (Makkai, 1981; Knight, Millar Young 2004): There are computable structures of all computable ranks, of Scott Rank $\omega_1^{CK}$, and of Scott Rank $\omega_{1}^{CK} + 1$.
+
+\end{slide}
+
+\begin{slide}{Scott Rank, cont'd}
+% Some of the results about Scott Ranks of computable structures via embeddings of hyperarithmetic structure
+Given computable structure $\mathcal{A}$, we construct automatic structure $\mathcal{A}^{*}$ such that $\mathcal{A} \cong \mathcal{B}$ iff $\mathcal{A}^{*} \cong \mathcal{B}^{*}$ and there is a copy of $\mathcal{A}$ definable in $\mathcal{A}^{*}$ by an $\mathcal{L}_{\omega_{1}, \omega}$ formula.
+
+(Joint with B Khoussainov)  
+\pause
+\vspace{-5pt}
+  \begin{itemize}
+    \item Assume wlog that $\mathcal{A}$ is graph.
+    \item Let $\mathcal{M}_{\mathcal{A}}$ be the reversible TM computing domain of $\mathcal{A}$, modified so it only halts in an accept state.
+    \item Let $Conf(\mathcal{M}_{\mathcal{A}})$ be the configuration space of $\mathcal{M}_{\mathcal{A}}$.  Recall, this is FA presentable.  Moreover, by reversibility, consists of chains either finite or isomorphic to $(\mathbb{N}, S)$.
+    \item The set of chains beginning with initial configurations is FA recognizable.
+    \item Smooth out so that it preserves isomorphisms
+%  \begin{itemize}
+%    \vspace{-5pt}
+%    \item make junk uniform;
+%    	% change chains not based at initial configuration to $\mathbb{Z}$ chains; add 	
+%	%$\omega$ copies of $\mathbb{Z}$ chains; add  $\omega$ copies of each of 
+%	%$\omega^{*} + n$ chains; 
+%    \item add "trees" to base of each computation chain : $w \in A \iff w$ is the base of a computation tree with no infinite path;
+%    \item add $\omega$ copies of pseudo-computation tree with infinite paths.
+%  \end{itemize}
+    \item For $R$ the edge relation in $\mathcal{A}$, let $\mathcal{M}_{\mathcal{R}}$ be the reversible TM computing $R$, modified as above.
+    \item Have similar automatic presentation of $R$, but connect representations of domain and edge relation.
+  \end{itemize}
+\end{slide}
+
+\section{Unary Automata}
+%Above we fixed class of automata and characterized structures representable by it.  We saw that automatic structures can be as complicated as computable structures.  However, intuition is that there is something simpler about automata.  Can we capture this via a restricted class of automatic structures?
+
+\begin{slide}{Unary Automata}
+  Def: A unary automatic structure is one which has a presentation over $\Sigma = \{ 1\}$.
+
+  The general shape of a unary automaton of a binary relation is:
+\vspace{-15pt}
+\begin{figure}[h]
+\begin{center}
+\resizebox{!}{2 cm}{\includegraphics{unary.eps}}
+\end{center}
+\end{figure}
+\vspace{-20pt}
+  Current work with B Khoussainov and J Liu: For finite degree graphs,
+  \begin{itemize}
+  \vspace{-5pt}
+  \item Given automaton recognizing edge relation, can construct unary automaton recognizing reachability relation.
+  \item Conjecture: isomorphism problem is decidable.
+  \item Conjecture: if $\text{Aut}(\mathcal{A})$ is at most countable, $\text{Aut}(\mathcal{A}) = {\text{Aut}}_{a}(\mathcal{A})$.
+  \end{itemize}
+\end{slide}
+
+\section{Decision Procedures}
+
+\begin{slide}{B\"uchi, Elgot, Rabin decision procedures}
+  For $S1S$:
+  \begin{itemize}
+    \item Encode relations as tuples of characteristic functions.
+    \item Bijection between formulae in $S1S$ and B\"uchi automata such that an $\omega$-language is B\"uchi recognizable iff it is definable in $S1S$.
+    \item $\varphi \in Th(S1S) \iff \varphi~\text{is valid} ~\iff \neg \varphi ~\text{is not satisfiable} ~\iff L(A_{\neg \varphi}) ~\text{is empty}$.
+  \end{itemize}
+  
+  \bigskip
+  
+  For $S2S$: Same idea except with sets of infinite binary trees instead of $\omega$-languages.
+\end{slide}
+
+\begin{slide}{Presburger arithmetic}
+  \vspace{-15pt}
+  FO Theory of $(\mathbb{Z}; +, \leq, 0, 1)$.
+  \begin{itemize}
+  \vspace{-5pt}
+    \item Presburger proved decidable (1927), Weispfenning gave triply exponential upper bound (97) -- both using quantifier elimination. \pause
+    \item Boudet, Comon (1996), Boigelot, Wolper (1995, 2000) gave automatic decision procedure
+    \begin{itemize}
+      \item Given formula $\varphi$, construct FA $A_{\varphi}$ which accepts an encoding of the set of tuples satisfying $\varphi$.
+      \item Atomic formula $\bar{a} \cdot \bar{x} = c$: states of FA represent integer value of $\bar{a} \cdot \bar{x}$ so far.  Accept if final state is $c$.
+      \item Atomic formula $\bar{a} \cdot \bar{x} \leq c$: similar, but need to add more transitions to any state representing number greater than current value.
+      \item Use closure under Boolean operations of regular languages to obtain automata for non-atomic formulae.
+      \item $\varphi$ is satisfiable iff $A_{\varphi}$ is non-empty.
+    \end{itemize}
+    \vspace{-5pt}\pause
+    \item Klaedtke (2003) showed that automatic decision method has tight triple exponential bound to size of automaton.  
+  \end{itemize}
+\end{slide}
+
+\begin{slide}{$p$-adics under $+$}
+  $p$-adic numbers are completion of $\mathbb{Q}$ wrt $N = | ~ |_{p}$
+  \begin{equation*}
+  |x|_{p} = \begin{cases} 
+  p^{-ord_{p}(x)} ~~ \text{if} ~x \neq 0,\\
+  0 ~~ \text{if}~x = 0.
+  \end{cases}
+%~~~~
+%ord_{p}(x) = \begin{cases}
+%\max \{ r : p^{r} | x \}~~ \text{if} ~x \in \mathbb{Z}, \\
+%ord_{p}(a) - ord_{p}(b) ~~ \text{if} x = \frac{a}{b} \in \mathbb{Q}.
+%\end{cases}
+  \end{equation*}
+  \begin{itemize}
+    \item Every $p$-adic has unique digit expansion $\alpha= \alpha_{-r} p^{-r} + \alpha_{1-r} p^{1-r} + \cdots + \alpha_{-1} p^{-1} + \alpha_{0} + \alpha_{1} p + \cdots$.
+    \item For automatic decision method, need to recognize $x_{1} + \cdots + x_{n} = 0$.
+    \item Use M\"uller automata where states keep track of carry, except for a distinguished fail state which is excluded from any successful run.  
+  \end{itemize}
+\end{slide}
+
+\begin{slide}{Khoussainov-Vardi conjecture}
+  \begin{itemize}
+    \item The decision methods we've discussed have used FA, BA, MA, Rabin Tree Automata.
+    \item Conjecture: If $\mathcal{A}$ has a decidable FO theory then there is an automata theoretic approach to proving decidability.
+ 
+   \begin{itemize}
+     \item Need to formalize "automata theoretic approach".
+     \item Do more general notions of automata need to be employed?
+   \end{itemize}
+ 
+ \end{itemize}
+\end{slide}
+
+\section{Future Directions}
+
+\begin{slide}{Next steps}
+  \begin{itemize}
+    \item Transducer representable structures: functional languages.  
+      \begin{itemize}
+        \item[] More in line with computational model as opposed to verification.
+      \end{itemize}
+      
+      \medskip
+      
+    \item B\"uchi automatic structures.  %Have seen utility in decision procedures, can they give us more...
+    
+    \medskip
+    
+    \item Automatic model theory.  % automatic Scott rank, automatic isomorphisms
+    
+   \medskip
+    
+    \item Current open questions 
+      \begin{itemize}
+    	\item Is $(\mathbb{Q}, +)$ FA-presentable?
+	\item Is $(\mathbb{N}, \cdot)$ B\"uchi-presentable? (known not to be FA-presentable)
+	\item Is the isomorphism question for unary automatic graphs decidable?
+      \end{itemize}
+  \end{itemize}
+\end{slide}
+
+
+\end{document}
+\endinput
+%%

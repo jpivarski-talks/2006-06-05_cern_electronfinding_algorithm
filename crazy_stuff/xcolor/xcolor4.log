@@ -1,0 +1,167 @@
+This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=latex 2006.3.18)  30 MAY 2006 14:36
+entering extended mode
+**xcolor4.tex
+(./xcolor4.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, catalan, croatian, czech, danish, dutch, finnish, greek, iceland
+ic, irish, italian, latin, magyar, norsk, norsk, portuges, romanian, russian, s
+lovak, slovene, spanish, swedish, turkish, ukrainian, nohyphenation, loaded.
+File: xcolor4 2005/12/21 v2.09 Color driver test (UK)
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: emtex.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/emtex.def
+File: emtex.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (./xcolor.sty
+Package: xcolor 2005/12/21 v2.09 LaTeX color extensions (UK)
+
+(/usr/share/texmf/tex/latex/config/color.cfg
+File: color.cfg 2001/08/31 v1.1 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 220.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1328.
+Package xcolor Info: Model `RGB' extended on input line 1344.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1346.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1347.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1348.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1349.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1350.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1351.
+)
+(/usr/share/texmf/tex/latex/misc/geometry.sty
+Package: geometry 2002/07/08 v3.2 Page Geometry
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@dimlist=\toks15
+
+(/usr/share/texmf/tex/latex/config/geometry.cfg
+File: geometry.cfg 2001/06/05 v1.0 teTeX (uncustomised setup)
+))
+No auxiliary output files.
+
+No file xcolor4.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+-------------------- Geometry parameters
+paper: a4paper
+landscape: --
+twocolumn: --
+twoside: --
+asymmetric: --
+h-parts: 35.56593pt, 526.376pt, 35.56593pt
+v-parts: 35.56593pt, 773.91498pt, 35.56593pt
+hmarginratio: --
+vmarginratio: --
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: --
+includefoot: --
+includemp: --
+driver: 
+-------------------- Page layout dimensions and switches
+\paperwidth  597.50787pt
+\paperheight 845.04684pt
+\textwidth  526.376pt
+\textheight 773.91498pt
+\oddsidemargin  -36.70406pt
+\evensidemargin -36.70406pt
+\topmargin  -36.70406pt
+\headheight 0.0pt
+\headsep    0.0pt
+\footskip   0.0pt
+\marginparwidth 57.0pt
+\marginparsep   11.0pt
+\columnsep  10.0pt
+\skip\footins  9.0pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 143.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 143.
+[1
+
+]
+
+ *File List*
+ article.cls    2001/04/21 v1.4e Standard LaTeX document class
+  size10.clo    2001/04/21 v1.4e Standard LaTeX file (size option)
+graphics.sty    2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+    trig.sty    1999/03/16 v1.09 sin cos tan (DPC)
+graphics.cfg    2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+   emtex.def    1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+  xcolor.sty    2005/12/21 v2.09 LaTeX color extensions (UK)
+   color.cfg    2001/08/31 v1.1 color configuration of teTeX/TeXLive
+   dvips.def    1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+geometry.sty    2002/07/08 v3.2 Page Geometry
+  keyval.sty    1999/03/16 v1.13 key=value parser (DPC)
+geometry.cfg    2001/06/05 v1.0 teTeX (uncustomised setup)
+ ***********
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1250 strings out of 95370
+ 14982 string characters out of 1188185
+ 123561 words of memory out of 1000001
+ 4359 multiletter control sequences out of 10000+50000
+ 5434 words of font info for 20 fonts, out of 500000 for 1000
+ 198 hyphenation exceptions out of 1000
+ 25i,14n,36p,191b,248s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on xcolor4.dvi (1 page, 53848 bytes).

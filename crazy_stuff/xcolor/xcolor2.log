@@ -1,0 +1,222 @@
+This is e-TeX, Version 3.14159-2.1 (Web2C 7.4.5) (format=latex 2006.3.18)  30 MAY 2006 14:36
+entering extended mode
+**xcolor2.tex
+(./xcolor2.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, catalan, croatian, czech, danish, dutch, finnish, greek, iceland
+ic, irish, italian, latin, magyar, norsk, norsk, portuges, romanian, russian, s
+lovak, slovene, spanish, swedish, turkish, ukrainian, nohyphenation, loaded.
+File: xcolor2 2005/12/21 v2.09 Pstricks color test (UK)
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/home/mccann/talks/cern_electronfinding_algorithm/pstricks/latex/pstricks.sty
+Package: pstricks 2005/12/19 v0.31 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/share/texmf/tex/generic/pstricks/pstricks.tex
+`PSTricks' v97 patch 14  <1999/12/23> (tvz)
+\pst@dima=\dimen103
+\pst@dimb=\dimen104
+\pst@dimc=\dimen105
+\pst@dimd=\dimen106
+\pst@dimg=\dimen107
+\pst@dimh=\dimen108
+\pst@hbox=\box26
+\pst@boxg=\box27
+\pst@cnta=\count87
+\pst@cntb=\count88
+\pst@cntc=\count89
+\pst@cntd=\count90
+\pst@cntg=\count91
+\pst@cnth=\count92
+\pst@toks=\toks14
+(/usr/share/texmf/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen109
+\psxunit=\dimen110
+\psyunit=\dimen111
+\pslinewidth=\dimen112
+\pst@customdefs=\toks15
+\pslinearc=\dimen113
+\everypsbox=\toks16
+\psframesep=\dimen114
+\pslabelsep=\dimen115
+\theoverlaybox=\box28
+)
+File: pstricks.tex 1999/12/23 v97 patch 14 `PSTricks' (tvz)
+ (./xcolor.sty
+Package: xcolor 2005/12/21 v2.09 LaTeX color extensions (UK)
+
+(/usr/share/texmf/tex/latex/config/color.cfg
+File: color.cfg 2001/08/31 v1.1 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Package option `override' ignored on input line 211.
+Package xcolor Info: Driver file: dvips.def on input line 220.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1328.
+Package xcolor Info: Model `RGB' extended on input line 1344.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1346.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1347.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1348.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1349.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1350.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1351.
+))
+(/home/mccann/talks/cern_electronfinding_algorithm/pstricks/latex/pst-tree.sty
+Package: pst-tree 2004/07/15 package wrapper for pst-tree.tex
+
+(/usr/share/texmf/tex/generic/pstricks/pst-tree.tex  v97 patch 5, 1999/10/28
+(/usr/share/texmf/tex/generic/pstricks/pst-node.tex  v97 patch 11, 2000/11/09
+\psrow=\count93
+\pscol=\count94
+\psmatrixcnt=\count95
+\psrowsep=\skip43
+\pscolsep=\skip44
+)
+\pstree@rootbox=\box29
+\pstree@box=\box30
+\psnodecnt=\count96
+\pstreelevel=\count97
+\pstreecnt=\count98
+\pstree@cnt=\count99
+\pstree@stop=\count100
+)
+File: pst-tree.tex 2000/11/09 97 patch 11 `pst-tree' (tvz)
+) (/usr/share/texmf/tex/latex/pstricks/pst-slpe.sty
+Package: pst-slpe 98/09/15: package wrapper for PSTricks pst-slpe.tex
+
+(/usr/share/texmf/tex/generic/pstricks/pst-slpe.tex  v1.0, 98/09/15))
+(/usr/share/texmf/tex/generic/multido/multido.sty
+Package: multido 1997/03/25 package wrapper for multido.tex
+
+(/usr/share/texmf/tex/generic/multido/multido.tex  v1.4, 93/01/14 <tvz>
+\multido@count=\count101
+\multidocount=\count102
+\multido@stuff=\toks17
+))
+(/usr/share/texmf/tex/latex/fancyvrb/fvrb-ex.sty
+Package: fvrb-ex 1998/03/26
+
+`fvrb-ex' v1.7, 1998/03/26 (Denis Girou)
+(/usr/share/texmf/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2000/03/21
+
+Style option: `fancyvrb' v2.7, with DG/SPQR fixes <2000/03/21> (tvz)
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+\FV@CodeLineNo=\count103
+\FV@InFile=\read1
+\FV@TabBox=\box31
+\c@FancyVerbLine=\count104
+\FV@StepNumber=\count105
+\FV@OutFile=\write3
+)
+\ttyin=\read2
+)
+No file xcolor2.aux.
+\openout1 = `xcolor2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 54.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 54.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 54.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 54.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 56.
+\openout3 = `xcolor2.tmp'.
+
+(./xcolor2.tmp)
+\openout3 = `xcolor2.tmp'.
+
+ (./xcolor2.tmp)
+\openout3 = `xcolor2.tmp'.
+
+ (./xcolor2.tmp)
+\openout3 = `xcolor2.tmp'.
+
+ (./xcolor2.tmp)
+\openout3 = `xcolor2.tmp'.
+
+ (./xcolor2.tmp
+\WL=\count106
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 22.
+)
+Overfull \hbox (37.5pt too wide) in paragraph at lines 27--151
+[] 
+ []
+
+
+LaTeX Warning: Float too large for page by 6.97221pt on input line 152.
+
+[1
+
+] [2] [3] (./xcolor2.aux)
+
+ *File List*
+ article.cls    2001/04/21 v1.4e Standard LaTeX document class
+  size10.clo    2001/04/21 v1.4e Standard LaTeX file (size option)
+pstricks.sty    2005/12/19 v0.31 LaTeX wrapper for `PSTricks' (RN,HV)
+pstricks.tex    1999/12/23 v97 patch 14 `PSTricks' (tvz)
+  xcolor.sty    2005/12/21 v2.09 LaTeX color extensions (UK)
+   color.cfg    2001/08/31 v1.1 color configuration of teTeX/TeXLive
+   dvips.def    1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+pst-tree.sty    2004/07/15 package wrapper for pst-tree.tex
+pst-tree.tex    2000/11/09 97 patch 11 `pst-tree' (tvz)
+pst-slpe.sty    98/09/15: package wrapper for PSTricks pst-slpe.tex
+ multido.sty    1997/03/25 package wrapper for multido.tex
+ fvrb-ex.sty    1998/03/26
+fancyvrb.sty    2000/03/21
+  keyval.sty    1999/03/16 v1.13 key=value parser (DPC)
+ xcolor2.tmp
+ xcolor2.tmp
+ xcolor2.tmp
+ xcolor2.tmp
+ xcolor2.tmp
+ ***********
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2769 strings out of 95370
+ 32845 string characters out of 1188185
+ 515299 words of memory out of 1000001
+ 5831 multiletter control sequences out of 10000+50000
+ 9440 words of font info for 34 fonts, out of 500000 for 1000
+ 198 hyphenation exceptions out of 1000
+ 33i,11n,57p,326b,491s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on xcolor2.dvi (3 pages, 383112 bytes).

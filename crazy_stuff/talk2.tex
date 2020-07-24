@@ -1,0 +1,19 @@
+\documentclass[landscape,25pt]{article}
+\usepackage[pdftex]{graphicx,color}
+\usepackage{amssymb}
+\pagestyle{empty}
+\oddsidemargin  -0.5 in
+\evensidemargin -0.5 in
+\headheight     0 in
+\topmargin      -1 in
+\textheight     7.7 in
+\textwidth      10 in
+\newenvironment{slide}[1][ ]{\mbox{\bf #1 } \vfill}{\vfill \mbox{ } \hfill \Large \arabic{page} \pagebreak}
+\begin{document}
+\sffamily
+\renewcommand{\labelitemi}{{\LARGE $\stackrel{\bullet}{\mbox{ }}$}}
+\setlength{\parindent}{0 cm}
+
+How 'bout this?
+
+\end{document}
